@@ -1,0 +1,106 @@
+<!-- Lujain Waleed Aljahdali - 2107397 - IAR - 21/3/2025 -->
+<!-- Rafa Omar Balkhdhar - 2106048 - IAR - 21/3/2025 -->
+<!-- Leen Anas Bafaqeeh - 2106170 - IAR - 21/3/2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Our Website Title  -->
+    <title>The Krusty Krab - Menu</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../global/main.css"> 
+
+    <!--All Fonts  -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- The Header  -->
+    <header>
+        <!-- The logo  -->
+        <img src="../images/logo-removebg-preview.png" alt="The Krusty Krab Logo" class="logo">
+        <img src="../images/imagelight.png" alt="Light" class="light">
+
+        <!-- Navigation  -->
+        <nav class="ann">
+            <ul class="navlinks">
+                <a href="..\index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="menu.html">Menu</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="#Feedback">Feedback</a>   
+            </ul>
+        </nav>
+
+        <!-- Cart Icon  -->
+        <div class="cart-icon">
+            <a href="cart.html"><i class="ri-shopping-cart-2-fill"></i></a>
+        </div>
+
+        
+    </header>
+
+    <!-- Menu Section  -->
+    <!-- Our restaurant menu and items are clickable, making visitors feel as if they are at the Krusty Krab.  -->
+    <h1 class="headingStyle">Galley Grub</h1>
+    <p class="menu-subtitle">Click an item to add to cart</p>
+
+    
+    <div class="menu-container">
+        <div class="menu-box">
+            <h3 class="menu-title">Krabby Patty</h3>
+            <p class="menu-item" onclick="addToCart('Krabby Patty')">Krabby Patty ........................... $1.25</p>
+            <p class="menu-item" onclick="addToCart('W/ sea cheese')">W/ sea cheese .......... $1.50</p>
+            <p class="menu-item" onclick="addToCart('Double Krabby Patty')">Double Krabby Patty ....................... $2.00</p>
+            <p class="menu-item" onclick="addToCart('W/ sea cheese')">W/ sea cheese ........... $2.25</p>
+            <p class="menu-item" onclick="addToCart('Triple Krabby Patty')">Triple Krabby Patty ....................... $3.00</p>
+            <p class="menu-item" onclick="addToCart('W/ sea cheese')">W/ sea cheese ........... $3.25</p>
+            <h3 class="menu-title">Coral Bits</h3>
+            <p class="menu-item" onclick="addToCart('Small Coral Bits')">Small ....................................... $1.00</p>
+            <p class="menu-item" onclick="addToCart('Medium Coral Bits')">Medium .................................. $1.25</p>
+            <p class="menu-item" onclick="addToCart('Large Coral Bits')">Large ..................................... $1.50</p>
+            <h3 class="menu-title">Kelp Rings</h3>
+            <p class="menu-item" onclick="addToCart('Kelp Rings')">Kelp Rings ............................ $1.50</p>
+            <p class="menu-item" onclick="addToCart('Salty Sauce')">Salty Sauce ........... $0.50</p>
+        </div>
+        <div class="menu-box">
+            <h3 class="menu-title">Krabby Meals</h3>
+            <p class="menu-item" onclick="addToCart('Krabby Meal')">Krabby Meal ........................ $3.50</p>
+            <p class="menu-item" onclick="addToCart('Double Krabby Meal')">Double Krabby Meal ........... $3.75</p>
+            <p class="menu-item" onclick="addToCart('Triple Krabby Meal')">Triple Krabby Meal ............. $4.00</p>
+            <p class="menu-item" onclick="addToCart('Golden Loaf')">Golden Loaf ........................ $2.00</p>
+            <p class="menu-item" onclick="addToCart('W/ sauce')">W/ sauce ........... $3.25</p>
+            <h3 class="menu-title">Kelp Shark</h3>
+            <p class="menu-item" onclick="addToCart('Kelp Shark')">Kelp Shark .......................................... $1.25</p>
+            <h3 class="menu-title">Seafoam Soda</h3>
+            <p class="menu-item" onclick="addToCart('Small Seafoam Soda')">Small ....................................... $1.00</p>
+            <p class="menu-item" onclick="addToCart('Medium Seafoam Soda')">Medium .................................. $1.25</p>
+            <p class="menu-item" onclick="addToCart('Large Seafoam Soda')">Large ..................................... $1.50</p>
+        </div>
+    </div>
+
+    <!-- Images -->
+    <img src="../images/flower1.png" alt="flower1" class="flower1">
+    <img src="../images/Untitled_design-removebg-preview.png" alt="flower2" class="flower2">
+    <img src="../images/Untitled_design__1_-removebg-preview.png" alt="flower3" class="flower3">
+
+   
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 SpongeBob Web. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>

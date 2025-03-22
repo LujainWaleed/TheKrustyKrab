@@ -1,0 +1,410 @@
+
+.form-welcoming{
+    text-align: center;
+}
+#rightcolumn {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    padding: 20px; /* Add some padding */
+    max-width: 800px; /* Limit the width */
+    margin: 0 auto; /* Center the column */
+}
+html, body {
+    min-height: 100%; /* Ensure it covers the full viewport height */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    display: flex;
+    flex-direction: column;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(250.55deg, #009CDE 5%, #0074d4 28.55%, #0791dd 90.55%);
+    color: white;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: transparent;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    display: block;
+    left: 10px;
+    top: 10px;
+    width: 180px;
+}
+
+.light {
+    position: absolute;
+    top: -280px;
+    left: -200px;
+    width: 500px;
+    height: auto;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.ann{
+   
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left:550px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-grow: 1;
+
+}
+/* Nav Links */
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;  
+}
+
+.navlinks a {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    transition: all 0.6s ease;
+    text-decoration: none;
+}
+
+.navlinks a:hover {
+    color: #02509d;
+}
+
+.icons {
+    font-size: 22px;
+}
+
+.icons i {
+    margin-left: 15px;
+    cursor: pointer;
+}
+* Cart Icon */
+.cart-icon {
+    position: absolute; /* يمكن التحكم في موقعها داخل الـ header */
+    top: 50%; /* محاذاة عمودية في المنتصف */
+    right: 230px; /* تغيير المسافة لتقريب الأيقونة من اليمين */
+    transform: translateY(-50%); /* لتوسيط الأيقونة عموديًا */
+    font-size: 35px; /* حجم الأيقونة */
+    cursor: pointer;
+    z-index: 10; /* التأكد من ظهور الأيقونة فوق باقي العناصر */
+    
+}
+
+.cart-icon a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cart-icon i {
+    color: white; /* اللون الأساسي */
+    transition: color 0.3s ease; /* تأثير التغيير عند التمرير */
+}
+
+.cart-icon:hover i {
+    color: #ba4040; /* تغيير اللون عند المرور بالأيقونة */
+}
+
+
+.profile {
+    position: absolute; /* يمكن التحكم في موقعها داخل الـ header */
+    top: 50%; /* محاذاة عمودية في المنتصف */
+    right: 180px; /* تغيير المسافة لتقريب الأيقونة من اليمين */
+    transform: translateY(-50%); /* لتوسيط الأيقونة عموديًا */
+    font-size: 35px; /* حجم الأيقونة */
+    cursor: pointer;
+    z-index: 10; /* التأكد من ظهور الأيقونة فوق باقي العناصر */
+    
+}
+
+.profile a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.profile i {
+    color: white; /* اللون الأساسي */
+    transition: color 0.3s ease; /* تأثير التغيير عند التمرير */
+    
+}
+
+.profile:hover i {
+    color: #ba4040; /* تغيير اللون عند المرور بالأيقونة */
+}
+
+form{
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+ }
+ 
+
+fieldset{
+    border-radius: 20px;
+    width: 800px;
+    padding: 15px;
+    margin: 20px;
+    border: 2px solid #ba4040;
+    background-color: rgba(123, 191, 218, 0.292);
+
+}
+button{
+    background-color: #D50000; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 1.5em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */   
+    margin-left: 750px;
+}
+.name-email{
+background-color: #eeedf2;
+color: #666;
+padding:1em;
+border-radius: 10px;
+border: 2px solid transparent;
+outline: none;
+font-family: 'Poppons', sans-serif;
+height: 1px;
+width: 200px;
+font-size: 12px;
+
+line-height: 1.4;
+
+
+
+}
+label.blockLable{
+    display: block;
+    position: relative;
+    margin: 12px 0px;
+}
+label.blockLable input{
+    position: absolute;
+    left: 150px;
+
+}
+input[ type="radio"]{
+    display: none;
+}
+.radio {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8em;
+    border: 3px solid rgb(175, 221, 249);
+    padding: 1.8em 1.8em;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.radio::before {
+    content: "";
+    height: 1.3em;
+    width: 1.3em;
+    border: 3px solid rgb(175, 221, 249);
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+}
+input[type="radio"]:checked + label.radio {
+    background-color: rgb(175, 221, 249);
+    color: #555;
+}
+input[type="radio"]:checked + label.radio::before {
+    background-color: white;
+    border: 0.4em solid white;
+    box-shadow: inset 0 0 0 0.4em rgb(162, 209, 216);
+}
+.Quotation{
+    position: relative;
+    z-index: 2;
+    -ms-text-kashida-space:  rgba(0, 0, 0, 0); /* Adds contrast */
+    font-family: "Londrina Solid", sans-serif;
+    color: #ba4040;
+    font-weight: bold;
+    background: none;
+    margin-bottom: 70px;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white 
+
+}
+.divbody{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vhl;
+    font-family: 'Poppons', sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.divcheck {
+margin: 10px;
+}
+.divcheck label {
+cursor: pointer;
+}
+.divcheck label span{
+cursor: pointer;
+position: relative;
+background: rgb(175, 221, 249);
+padding: 15px 30px;
+color: #555;
+text-shadow: 0 1px 4ox rgba(0,0,0,.5);
+border-radius: 30px;
+font-size: 10px;
+transition: 0.5s;
+user-select: none;
+overflow: hidden;
+}
+.divcheck label input[type="checkbox"]{
+display: none;
+}
+.divcheck label span:before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 50%;
+background: rgba(255, 255, 255, .1);
+}
+.divcheck label input[type="checkbox"]:checked ~ span{
+background: #ba4040;
+color: #fff;
+box-shadow: #555;
+
+}
+
+.comments{
+margin-left: 380px;
+background-color: #eeedf2;
+color: #000000;
+padding:1em;
+border-radius: 10px;
+border: 2px solid transparent;
+outline: none;
+font-family: 'Poppons', sans-serif;
+font-weight: 200px;
+font-size: 16px;
+line-height: 1.4;
+margin-bottom: 15px;
+
+}
+.comments:hover{
+cursor: pointer;
+background-color: #eeee;
+
+}
+.dropdown{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    width: 300px;
+    height: 50px;
+
+
+}
+.dropdown::before{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 10000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.dropdown.active::before{
+    top: 22px;
+    transform: rotate(-225deg);
+
+}
+.dropdown input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: white;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) ;
+    padding: 0px 0px;
+    border-radius: 10px;
+}
+.dropdown .option {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 999; /* Ensures the dropdown appears above other elements */
+}
+
+.dropdown.active .option{
+    display: block;
+
+}
+
+.dropdown .option div{
+    padding: 12px 20px;
+    cursor: pointer;
+    color: black;
+
+}
+.dropdown .option div:hover{
+    background: skyblue;
+    color: rgb(11, 11, 11);
+
+}
+i{
+    margin-left: 2px;
+    margin-right: 3px;
+    position: relative;
+    font-size: 1.2em;
+}

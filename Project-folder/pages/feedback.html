@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Krusty Krab - Menu</title>
+    <link rel="stylesheet" href="../global/main.css"> <!-- تأكد من المسار الصحيح -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body class="feedback-page">
+    <header>
+        <img src="../images/logo-removebg-preview.png" alt="The Krusty Krab Logo" class="logo">
+        <img src="../images/imagelight.png" alt="Light" class="light">
+
+        <nav class="ann">
+            <ul class="navlinks">
+                <a href="..\index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="menu.html">Menu</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="#Feedback">Feedback</a>   
+            </ul>
+        </nav>
+
+        <div class="cart-icon">
+            <a href="cart.html"><i class="ri-shopping-cart-2-fill"></i></a>
+        </div>
+
+        <div class="profile">
+            <a href="#profile"><i class="ri-account-circle-line"></i></a>
+        </div>
+    </header>
+
+    <div id="rightcolumn">
+        <div>
+            <h2 class="form-welcoming">Ahoy there, matey! 🏴‍☠️</h2>
+            <h3 class="form-welcoming">Tell us what you think? Did we make your day extra bubbly? 🫧</h3>
+        </div>
+        <div>
+            <form name="FeedbackForm" id="FeedbackForm">
+                <fieldset id="contact">
+                    <legend>Contact Information</legend>
+                    <label class="blockLable">
+                        <b class="NameEmail">Full name <span>*</span>:</b>
+                        <input class="name-email" type="text" id="FullName" name="FullName" placeholder="Larry the Lobster" />
+                    </label>
+                    <label class="blockLable">
+                        <b class="NameEmail">Email <span>*</span>:</b>
+                        <input class="name-email" type="email" id="email" name="email" placeholder="xxxx@email.com" />
+                    </label>
+                    <label class="blockLable">
+                        <b class="NameEmail">What type of entertainment do you enjoy?</b>
+                    </label>
+                    <div class="dropdown">
+                        <input type="text" class="text-box" placeholder="Choose from the list" readonly />
+                        <div class="option">
+                            <div onclick="show('Live Character Appearances')"><i class='bx bxs-face'></i>Live Character Appearances</div>
+                            <div onclick="show('Interactive Games & Challenges')"><i class='bx bxs-game'></i>Interactive Games & Challenges</div>
+                            <div onclick="show('Music & Live Performances')"><i class='bx bxs-music'></i>Music & Live Performances</div>
+                            <div onclick="show('No Entertainment, Just Good Food')"><i class='bx bxs-bowl-hot'></i>No Entertainment, Just Good Food</div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="rating">
+                    <legend>Rating The Experience</legend>
+                    <b class="Quotation">Overall experience:</b>
+                    <div class="radio-group">
+                        <input type="radio" class="radio" name="rate" id="choice1" value="1" />
+                        <label class="radio" for="choice1">Worst</label>
+                        <input type="radio" name="rate" id="choice2" value="2" />
+                        <label class="radio" for="choice2">Bad</label>
+                        <input type="radio" name="rate" id="choice3" value="3" />
+                        <label class="radio" for="choice3">Okay</label>
+                        <input type="radio" name="rate" id="choice4" value="4" />
+                        <label class="radio" for="choice4">Good</label>
+                        <input type="radio" name="rate" id="choice5" value="5" />
+                        <label class="radio" for="choice5">Great</label>
+                    </div>
+                    <div class="divbody">
+                        <b class="Quotation">Most enjoy:</b>
+                        <div class="Container">
+                            <div class="divcheck">
+                                <label>
+                                    <input type="checkbox" name="" />
+                                    <span>Delicious food</span>
+                                </label>
+                            </div>
+                            <div class="divcheck">
+                                <label>
+                                    <input type="checkbox" name="" />
+                                    <span>Fast service</span>
+                                </label>
+                            </div>
+                            <div class="divcheck">
+                                <label>
+                                    <input type="checkbox" name="" />
+                                    <span>Fun atmosphere</span>
+                                </label>
+                            </div>
+                            <div class="divcheck">
+                                <label>
+                                    <input type="checkbox" name="" />
+                                    <span>Good prices</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="opinion">
+                    <legend>Share Your Thoughts</legend>
+                    <b class="Quotation" style="margin-bottom: 70px;">Which area you believe requires improvement:</b>
+                    <textarea class="comments" rows="5" cols="40" placeholder="Tell us about your experience with us..."></textarea>
+                </fieldset>
+                <button type="button">Send</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function show(anything) {
+            document.querySelector('.text-box').value = anything;
+        }
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function () {
+            dropdown.classList.toggle('active');
+        }
+    </script>
+
+
+
+    <footer>
+        <p>© 2025 CPCS403 Project</p>
+    </footer>
+
+</body>
+</html>

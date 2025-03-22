@@ -1,0 +1,901 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* يمنع التمدد الزائد أفقياً */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(250.55deg, #009CDE 15%, #0074d4 28.55%, #0791dd 90.55%);
+    color: white;
+    text-align: justify;
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    background: transparent;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    width: 180px;
+}
+
+.light {
+    position: absolute;
+    top: -280px;
+    left: -200px;
+    width: 500px;
+    height: auto;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.ann{
+   
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 600px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-grow: 1;
+
+}
+/* Nav Links */
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    
+}
+
+.navlinks a {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    transition: all 0.6s ease;
+    text-decoration: none;
+}
+
+.navlinks a:hover {
+    color: #02509d;
+}
+
+.icons {
+    font-size: 22px;
+}
+
+.icons i {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 80vh;
+    margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    align-items: left;
+    text-align: right;
+    max-width: 1000px;
+    margin-left: 400px;
+    
+
+}
+
+.krusty-img {
+    max-width: 100%; /* تجعل الصور تتناسب مع عرض العنصر الأب */
+    height: auto; 
+    flex-wrap: wrap;
+    width: 500px; 
+    margin-left: -150px;
+    margin-top: -250px;
+    animation: float 3s linear infinite;
+
+}
+
+@keyframes float{
+    0%, 70%{
+        transform: translateY(0rem);
+
+    }
+
+    70%{
+        transform: translateY(0.5rem);
+
+    }
+}
+
+.KrabbyPatty {
+    display: flex;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    font-style: normal;
+    position: absolute; /* Change to fixed position */
+    left: 450px; /* Horizontal position */
+    bottom: 460px; /* Vertical position */
+}
+
+.content {
+    margin-top: -150px;
+    text-align: left;
+    position: relative;
+    left: 90px; /* Moves the text to the right without affecting layout size */
+}
+
+
+
+.content h2 {
+    font-size: 40px;
+    font-family: "Big Shoulders", sans-serif;
+}
+
+.content p {
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+}
+
+.highlight {
+    color: #ba4040;
+    font-weight: bold;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 45px;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white
+}
+.explore-link {
+    display: flex; /* Keep it inline-block for button-like behavior */
+    margin: none; /* Center horizontally */
+    text-decoration: underline;
+    color: #b14646; /* Primary color */
+    right:1055px;
+    top:265px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+    position: relative; /* Change to relative */
+    bottom: 0; /* Reset bottom positioning */
+    padding-bottom: 300px; /* Add padding to create space from the bottom */
+}
+
+.explore-link:hover {
+    color: #ba4040; /* تغيير اللون إلى الأحمر عند التمرير فوق الرابط */
+}
+
+
+
+
+/* Cart Icon */
+.cart-icon {
+    position: absolute; /* يمكن التحكم في موقعها داخل الـ header */
+    top: 50%; /* محاذاة عمودية في المنتصف */
+    right: 210px; /* تغيير المسافة لتقريب الأيقونة من اليمين */
+    transform: translateY(-50%); /* لتوسيط الأيقونة عموديًا */
+    font-size: 35px; /* حجم الأيقونة */
+    cursor: pointer;
+    z-index: 10; /* التأكد من ظهور الأيقونة فوق باقي العناصر */
+    
+}
+
+.cart-icon a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cart-icon i {
+    color: white; /* اللون الأساسي */
+    transition: color 0.3s ease; /* تأثير التغيير عند التمرير */
+}
+
+.cart-icon:hover i {
+    color: #ba4040; /* تغيير اللون عند المرور بالأيقونة */
+}
+
+
+.profile {
+    position: absolute; /* يمكن التحكم في موقعها داخل الـ header */
+    top: 50%; /* محاذاة عمودية في المنتصف */
+    right: 180px; /* تغيير المسافة لتقريب الأيقونة من اليمين */
+    transform: translateY(-50%); /* لتوسيط الأيقونة عموديًا */
+    font-size: 35px; /* حجم الأيقونة */
+    cursor: pointer;
+    z-index: 10; /* التأكد من ظهور الأيقونة فوق باقي العناصر */
+    
+}
+
+.profile a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.profile i {
+    color: white; /* اللون الأساسي */
+    transition: color 0.3s ease; /* تأثير التغيير عند التمرير */
+    
+}
+
+.profile:hover i {
+    color: #ba4040; /* تغيير اللون عند المرور بالأيقونة */
+}
+
+.flower1 {
+    position: absolute;
+    left: 10px;
+    top:300px;
+    width: 150px;
+}
+
+.flower2 {
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    width: 210px;
+}
+
+.flower3 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 500px;
+}
+
+
+.banner {
+    background-color: #094194; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 2px;
+    position: relative;
+    border: 2px solid #094194; /* إطار أصفر */
+    overflow: visible; /* يسمح للصورة بالخروج عن المستطيل */
+    margin-top: 50px;
+    font-family: "Raleway", sans-serif;
+    
+}
+
+.image-container {
+    position: relative; /* لجعل الصورة تخرج من الحاوية */
+}
+
+.coral-bits-image {
+    width: 600px; /* حجم الصورة */
+    position: absolute; /* يجعل الصورة تخرج عن الحاوية */
+    bottom: -250px; /* تعديل الموقع لأعلى */
+    right: 280px;
+}
+
+.banner-text {
+    font-size: 20px; /* حجم الخط */
+    margin-left: 400px; /* المسافة من اليسار، يمكنك تعديل القيمة حسب الحاجة */
+    text-align: left; /* محاذاة النص إلى اليسار */
+    max-width: 700px;
+   
+}
+
+.Discounts-text{
+    font-family: "Londrina Solid", sans-serif;
+    margin-left: 400px; 
+    text-align: left;
+    color: #ba4040;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white 
+}
+
+.headingStyle {
+    text-align: center;
+    color: #ba4040;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 45px;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white 
+
+}
+
+
+
+
+.footer {
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+/* Menu Page*/
+.menu-title {
+    font-size: 200px;
+    margin-top: 10px;
+    text-shadow: 1px 1px black;
+    color: #ffcc00;
+    font-family: "Londrina Solid", sans-serif;
+    
+}
+.highlight-menu{
+    color: #ba4040;
+    font-weight: bold;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 45px;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white  
+}
+.menu-subtitle{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+}
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.menu-box {
+    border: 6px solid white;
+    padding: 20px;
+    width: 500px;
+    text-align:center;
+    font-size: 18px;
+}
+.menu-box h3 {
+    text-align: center;
+    font-size: 22px;
+}
+.menu-item {
+    cursor: pointer;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+}
+.menu-item:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+
+
+/* Cart Page*/
+.cart {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+.checkout-button {
+    background-color: #D50000; 
+    color: white; 
+    border: none; 
+    border-radius: 12px; 
+    padding: 10px 20px; 
+    font-size: 1.5em; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    position: absolute;
+    right: 885px;
+    top: 360px;
+    box-shadow: 3px 3px white;
+}
+
+.checkout-button:hover {
+    background-color: #A00000; 
+}
+
+.home-button {
+    background-color: #D50000; 
+    color: white; 
+    border: none; 
+    border-radius: 12px; 
+    padding: 10px 20px; 
+    font-size: 1.5em; 
+    cursor: pointer; 
+    position: absolute;
+    right: 910px;
+    top: 450px;
+    transition: background-color 0.3s; 
+    box-shadow: 3px 3px white;
+}
+
+.home-button:hover {
+    background-color: #A00000; 
+}
+
+.checkout h3{
+    margin-top: 250px;
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* Video Page*/
+.VideoContent {
+    max-width: 750px; 
+    margin: auto; 
+    padding: 1px; 
+    text-align: center; 
+}
+
+.VideoContent h1{
+    color: #ba4040;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 45px;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white  
+}
+
+.VideoContent p {
+    font-family: "Raleway", sans-serif;
+}
+
+.Video {
+    width: 850px;
+    height: 600px;
+    position: relative;
+    margin: auto;  
+}
+
+.weed1{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 200px;
+}
+
+.weed2{
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 200px;
+    z-index: -1;
+}
+
+.weed3{
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    width: 200px;
+}
+
+.weed4{
+    position: absolute;
+    bottom: 1px;
+    left: 3px;
+    width: 200px;
+    z-index: -1;
+}
+
+
+/* Services Page */
+.page-title{
+    margin-bottom: 50px;
+    color: #ba4040;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white 
+}
+.box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-color:#ba4040 ;
+}
+.text-in-box{
+    width: 200px;
+    border: 3px solid ;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 20px; 
+max-width: 700px;
+}
+
+.text-in-box::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  /*  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 20px;
+}
+.Services-title{
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    -ms-text-kashida-space:  rgba(0, 0, 0, 0); /* Adds contrast */
+    font-family: "Londrina Solid", sans-serif;
+    color: #ba4040;
+    font-weight: bold;
+    background: none;
+    text-shadow: 1px 1px 0px white,2px 2px 0px white,3px 3px 0px white,2px 2px 0px white,1px 1px 0px white    
+}
+
+.Services-explain{
+    margin-bottom: 90px;
+    position: relative;
+    z-index: 2;
+    background: none;
+}
+
+
+/* Feedback Page */
+#rightcolumn {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    padding: 20px; /* Add some padding */
+    max-width: 800px; /* Limit the width */
+    margin: 0 auto; /* Center the column */
+}
+
+form{
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+ }
+ 
+
+fieldset{
+    border-radius: 20px;
+    width: 800px;
+    padding: 15px;
+    margin: 20px;
+    border: 2px solid #ba4040;
+    background-color: rgba(123, 191, 218, 0.292);
+
+}
+
+button{
+    background-color: #D50000; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 1.5em; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */   
+    margin-left: 750px;
+}
+.name-email {
+    background-color: #eeedf2;
+    color: #666;
+    padding:1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-family: 'Poppons', sans-serif;
+    height: 1px;
+    width: 200px;
+    font-size: 12px;
+    right: 30px;
+    line-height: 1.4;
+}
+
+label.blockLable {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    margin-left: 20px;
+}
+
+label.blockLable input {
+    width: 200px; 
+}
+
+input[ type="radio"]{
+    display: none;
+}
+.radio {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8em;
+    border: 3px solid rgb(175, 221, 249);
+    padding: 1.8em 1.8em;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.radio::before {
+    content: "";
+    height: 1.3em;
+    width: 1.3em;
+    border: 3px solid rgb(175, 221, 249);
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.3s;
+}
+input[type="radio"]:checked + label.radio {
+    background-color: rgb(175, 221, 249);
+    color: #555;
+}
+input[type="radio"]:checked + label.radio::before {
+    background-color: white;
+    border: 0.4em solid white;
+    box-shadow: inset 0 0 0 0.4em rgb(162, 209, 216);
+}
+.Quotation {
+    position: relative;
+    z-index: 2;
+    font-family: "Londrina Solid", sans-serif;
+    color: #ba4040;
+    font-weight: bold;
+    background: none;
+    text-align: left;
+    margin-bottom: 70px;
+    margin-left: 10px;
+    text-shadow: 1px 1px 0px white, 
+                 2px 2px 0px white, 
+                 3px 3px 0px white; 
+}
+
+.NameEmail {
+    font-family: "Londrina Solid", sans-serif;
+    color: #ba4040;
+    font-weight: bold;
+    text-align: left; 
+    margin-bottom: 10px; 
+    text-shadow: 1px 1px 0px white, 
+                 2px 2px 0px white, 
+                 3px 3px 0px white; 
+}
+
+.divbody{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200vhl;
+    font-family: 'Poppons', sans-serif;
+}
+.Container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.divcheck {
+margin: 10px;
+}
+.divcheck label {
+cursor: pointer;
+}
+.divcheck label span{
+cursor: pointer;
+position: relative;
+background: rgb(175, 221, 249);
+padding: 15px 30px;
+color: #555;
+text-shadow: 0 1px 4ox rgba(0,0,0,.5);
+border-radius: 30px;
+font-size: 10px;
+transition: 0.5s;
+user-select: none;
+overflow: hidden;
+}
+.divcheck label input[type="checkbox"]{
+display: none;
+}
+.divcheck label span:before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 50%;
+background: rgba(255, 255, 255, .1);
+}
+.divcheck label input[type="checkbox"]:checked ~ span{
+background: #ba4040;
+color: #fff;
+box-shadow: #555;
+
+}
+
+.comments{
+margin-left: 380px;
+background-color: #eeedf2;
+color: #000000;
+padding:1em;
+border-radius: 10px;
+border: 2px solid transparent;
+outline: none;
+font-family: 'Poppons', sans-serif;
+font-weight: 200px;
+font-size: 16px;
+line-height: 1.4;
+margin-bottom: 15px;
+
+}
+.comments:hover{
+cursor: pointer;
+background-color: #eeee;
+
+}
+.dropdown{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    position: relative;
+   
+    margin-bottom: 10px;
+    margin-left: 150px;
+    width: 300px;
+    height: 50px;
+
+
+}
+.dropdown::before{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 10000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.dropdown.active::before{
+    top: 22px;
+    transform: rotate(-225deg);
+
+}
+.dropdown input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: white;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) ;
+    padding: 0px 0px;
+    border-radius: 10px;
+}
+.dropdown .option {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 999; /* Ensures the dropdown appears above other elements */
+}
+
+.dropdown.active .option{
+    display: block;
+
+}
+
+.dropdown .option div{
+    padding: 12px 20px;
+    cursor: pointer;
+    color: black;
+
+}
+.dropdown .option div:hover{
+    background: skyblue;
+    color: rgb(11, 11, 11);
+
+}
+i{
+    margin-left: 2px;
+    margin-right: 3px;
+    position: relative;
+    font-size: 1.2em;
+}
+
+
+/* Schedule Page */
+.schedule-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* flowers design positioning */
+.flower-right {
+    position: fixed;
+    top: 170px;
+    right: 100px;
+    width: 170px;
+    height: auto;
+}
+
+.flower-yellow {
+    position: fixed;
+    top: 500px;
+    right: 200px;
+    width: 70px;
+    height: auto;
+}
+
+.flower-blue {
+    position: fixed;
+    top: 800px;
+    right: 300px;
+    width: 250px;
+    height: auto;
+}
+
+
+.schedule {
+    width: 50%;
+    border-collapse: collapse;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+    .schedule th, .schedule td {
+        border:4px solid white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .schedule th {
+        background-color: #BA4040;
+        color: white;
+        font-size: 22px;
+    }
+    .time {
+    font-size: 22px; 
+    font-weight: bold;
+    color: white 
+    }
+    /* Styling for 'Closed' text on friday */
+    .schedule .closed {
+        color: #BA4040;
+        font-weight: bold;
+    }
+
+
